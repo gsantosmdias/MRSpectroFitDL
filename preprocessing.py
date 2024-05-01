@@ -55,7 +55,6 @@ class STFT(nn.Module):
 
         num_frames = spec_mag.shape[-1]
         t = torch.linspace(0, (num_frames - 1) * (self.hop_size / fs), num_frames)
-        t = t.to(x.device)
         t = t.unsqueeze(0).expand(Zxx.shape[0], -1)
 
         Zxx_parts = torch.chunk(Zxx, 2, dim=1)
@@ -65,7 +64,6 @@ class STFT(nn.Module):
         f_ordered = torch.cat((f_parts[1], f_parts[0]), dim=1)
 
         ppm_axis = 4.65 - f_ordered / larmorfreq
-        ppm_axis = ppm_axis.to(x.device)
 
         ppm_mask = (ppm_axis >= self.ppm_lim[0]) & (ppm_axis <= self.ppm_lim[1])
         t_mask = (t >= self.t_lim[0]) & (t <= self.t_lim[1])
@@ -78,6 +76,7 @@ class STFT(nn.Module):
         Zxx_zoomed = filtered_freq[:, :, t_mask_single]
 
         spectrogram = interpolate_matrix(Zxx_zoomed)
+        spectrogram = torch.flip(spectrogram, dims=[2])
 
         spectrogram_real = spectrogram.real[:, 0, :, :]
         spectrogram_imag = spectrogram.imag[:, 0, :, :]
