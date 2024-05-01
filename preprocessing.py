@@ -1,3 +1,7 @@
+"""
+Maintainer: Gabriel Dias (g172441@dac.unicamp.br)
+"""
+
 import torch
 import torch.nn.functional as F
 import torch.nn as nn

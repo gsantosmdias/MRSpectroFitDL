@@ -1,3 +1,7 @@
+"""
+Maintainer: Gabriel Dias (g172441@dac.unicamp.br)
+"""
+
 import time
 import os
 import argparse
