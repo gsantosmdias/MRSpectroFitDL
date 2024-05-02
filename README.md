@@ -148,6 +148,9 @@ Here's an example of how you might evaluate the trained model:
 ```bash
 python evaluate.py configs/config_model.yaml models_h5/TimmModelSpectrogram.pt
 ```
+## Developer
+
+- [Gabriel Dias](https://github.com/gsantosmdias)
 
 ## Citation
 
