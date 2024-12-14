@@ -35,7 +35,7 @@
 **Next Steps**: Upcoming studies to test on in-vivo data and benchmark against  well-known MRS software, e.g., LCModel [6].
 
 ## Conference Presentation
-This project was presented at the [10th BRAINN Congress](https://www.brainncongress.com/10th-brainn-congress-2024/), showcasing the developments in MRS fitting techniques.
+This project was presented at the [10th BRAINN Congress](https://www.brainn.org.br/wp-content/uploads/2024/09/CEPID-BRAINN-JECN-vol-29-Number-1-2024.pdf), showcasing the developments in MRS fitting techniques.
 
 ## Acknowledgments
 This work is an extension of the foundational research and open-source repository [![MICLab](https://img.shields.io/badge/MICLab-Spectral%20Fitting%20SIPAIM-red)](https://github.com/MICLab-Unicamp/Spectral_fitting_SIPAIM), which has has adapted the robust and flexible Spectro-ViT training framework [![GitHub](https://img.shields.io/badge/MICLab-Spectro_ViT-purple)](https://github.com/MICLab-Unicamp/Spectro-ViT).
